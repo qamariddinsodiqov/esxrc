@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    gap: 20px; /* Space between elements */
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.logo img {
+    height: 40px; /* Adjust logo size */
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c; /* Example color based on image */
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1; /* Allows search bar to take available space */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* To keep button and input aligned within border */
+    max-width: 400px; /* Limit search bar width */
+}
+
+.search-bar input {
+    border: none;
+    padding: 8px 12px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+}
+
+.search-bar button:hover {
+    background-color: #e0e0e0;
+}
+
+.nav-links {
+    margin-left: auto; /* Pushes nav links to the right */
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #007bff; /* Example link color */
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent wrapping for links */
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Basic responsiveness (optional) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .search-bar {
+        order: 3; /* Move search bar to new line */
+        width: 100%;
+        margin-top: 10px;
+        max-width: none;
+    }
+    .nav-links {
+        order: 2; /* Adjust order */
+        margin-left: 0;
+    }
+    .logo {
+        order: 1;
+    }
+    .menu-icon {
+        order: 0;
+    }
+}
